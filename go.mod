@@ -1,4 +1,4 @@
-module github.com/michaelzx/zky-sqlx-gen
+module github.com/michaelzx/sqlx-struct-gen
 
 go 1.13
 
