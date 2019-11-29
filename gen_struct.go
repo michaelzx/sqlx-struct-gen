@@ -8,9 +8,9 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jimsmart/schema"
 	"github.com/jinzhu/inflection"
-	"github.com/michaelzx/zky-sqlx-gen/dbmeta"
-	"github.com/michaelzx/zky-sqlx-gen/tpl"
-	"github.com/michaelzx/zky-sqlx-gen/utils"
+	"github.com/michaelzx/sqlx-struct-gen/dbmeta"
+	"github.com/michaelzx/sqlx-struct-gen/tpl"
+	"github.com/michaelzx/sqlx-struct-gen/utils"
 	"go/format"
 	"io/ioutil"
 	"log"
@@ -92,7 +92,6 @@ func genStruct() {
 			fmt.Println("Error in rendering model: " + err.Error())
 			return
 		}
-		fmt.Print(buf.String())
 		data, err := format.Source(buf.Bytes())
 		if err != nil {
 			fmt.Println("Error in formating source: " + err.Error())
