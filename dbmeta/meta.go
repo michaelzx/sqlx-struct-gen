@@ -20,37 +20,37 @@ type ModelInfo struct {
 // Only add entries that are highly unlikely to be non-initialisms.
 // For instance, "ID" is fine (Freudian code is rare), but "AND" is not.
 var commonInitialisms = map[string]bool{
-	"API":   true,
-	"ASCII": true,
-	"CPU":   true,
-	"CSS":   true,
-	"DNS":   true,
-	"EOF":   true,
-	"GUID":  true,
-	"HTML":  true,
-	"HTTP":  true,
-	"HTTPS": true,
-	"ID":    true,
-	"IP":    true,
-	"JSON":  true,
-	"LHS":   true,
-	"QPS":   true,
-	"RAM":   true,
-	"RHS":   true,
-	"RPC":   true,
-	"SLA":   true,
-	"SMTP":  true,
-	"SSH":   true,
-	"TLS":   true,
-	"TTL":   true,
-	"UI":    true,
-	"UID":   true,
-	"UUID":  true,
-	"URI":   true,
-	"URL":   true,
-	"UTF8":  true,
-	"VM":    true,
-	"XML":   true,
+	// "API":   true,
+	// "ASCII": true,
+	// "CPU":   true,
+	// "CSS":   true,
+	// "DNS":   true,
+	// "EOF":   true,
+	// "GUID":  true,
+	// "HTML":  true,
+	// "HTTP":  true,
+	// "HTTPS": true,
+	// "ID":    true,
+	// "IP":    true,
+	// "JSON":  true,
+	// "LHS":   true,
+	// "QPS":   true,
+	// "RAM":   true,
+	// "RHS":   true,
+	// "RPC":   true,
+	// "SLA":   true,
+	// "SMTP":  true,
+	// "SSH":   true,
+	// "TLS":   true,
+	// "TTL":   true,
+	// "UI":    true,
+	// "UID":   true,
+	// "UUID":  true,
+	// "URI":   true,
+	// "URL":   true,
+	// "UTF8":  true,
+	// "VM":    true,
+	// "XML":   true,
 }
 
 var intToWordMap = []string{
@@ -87,6 +87,7 @@ func GenerateStruct(db *sql.DB, tableName string, structName string, pkgName str
 		}
 	}
 	var imports []string
+	imports = append(imports, `"github.com/michaelzx/zky-server/core"`)
 	if hasSqlNullField {
 		imports = append(imports, `"database/sql"`)
 	}

@@ -1,6 +1,7 @@
 package dbmeta
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 	"time"
@@ -13,6 +14,15 @@ type Employee struct {
 	LastName  string    `gorm:"column:last_name" json:"last_name"`
 	Gender    string    `gorm:"column:gender" json:"gender"`
 	HireDate  time.Time `gorm:"column:hire_date" json:"hire_date"`
+}
+
+func TestSsdfasdf(t *testing.T) {
+	fmt.Println(stringifyFirstChar("a"))
+	fmt.Println(stringifyFirstChar("b"))
+	fmt.Println(stringifyFirstChar("c"))
+	fmt.Println(stringifyFirstChar("1"))
+	fmt.Println(stringifyFirstChar("2"))
+	fmt.Println(stringifyFirstChar("3"))
 }
 
 func Test_Copy(t *testing.T) {
